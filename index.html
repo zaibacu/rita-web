@@ -1,107 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Rita-DSL</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/tomorrow.css">
-  </head>
-  <body>
-    <main>
-      <div class="container">
-        <div class="section scrollspy" id="home">
-          <div class="row">
-            <div class="col xl6 l12">
-              <img src="assets/logo-2-small.png">
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col m9 l10">
+
+                <div class="section scrollspy" id="home">
+                    <div class="row">
+                        <div class="col s12">
+                            <img src="assets/logo-2-small.png">
+                        </div>
+                        <div class="col s12">
+                            <p class="flow-text">
+                                RITA is a <b>D</b>omain <b>S</b>pecific <b>L</b>anguage designed to create language
+                                patterns. <br/>
+                                These are used to find and extract information from text.
+                            </p>
+
+                            <p>
+                                <a href="https://github.com/zaibacu/rita-dsl" rel="nofollow" target="_blank">
+                                    <img src="https://img.shields.io/badge/rita-github-green.svg"/>
+                                </a>
+                                <a href="https://pypi.python.org/pypi/rita-dsl/" rel="nofollow" target="_blank">
+                                    <img src="https://camo.githubusercontent.com/0b02b2e57bb22a803351f2ba6aa9d2d17c143a81/68747470733a2f2f62616467652e667572792e696f2f70792f726974612d64736c2e737667"
+                                         alt="PyPI version fury.io"
+                                         data-canonical-src="https://badge.fury.io/py/rita-dsl.svg"
+                                         style="max-width:100%;">
+                                </a>
+                                <a href="https://rita-dsl.readthedocs.io/en/latest/" target="_blank" rel="nofollow">
+                                    <img alt="Flat-Square Badge"
+                                         src="https://readthedocs.org/projects/rita-dsl/badge/?version=latest">
+                                </a>
+                                <a href="https://github.com/zaibacu/rita-dsl/blob/master/LICENSE" target="_blank"
+                                   rel="nofollow">
+                                    <img src="https://camo.githubusercontent.com/dfa671aeae5ff24f8ad302ef81b2f8ec9118d3cd/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f7a6169626163752f726974612d64736c2e737667"
+                                         alt="GitHub license"
+                                         data-canonical-src="https://img.shields.io/github/license/zaibacu/rita-dsl.svg"
+                                         style="max-width:100%;">
+                                </a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="parallax-container">
+                  <div class="parallax">
+                    <img src="assets/logo-2.png">
+                  </div>
+                </div>-->
+
+                <div class="section scrollspy" id="products">
+                    <div class="row">
+                        <h2>Products</h2>
+                        <div class="col s12 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="assets/github-logo.png"/>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">rita-dsl</span>
+                                    <p>
+                                        This is language itself. It is completely OpenSource, you can freely use it in
+                                        your project.
+                                    </p>
+                                </div>
+                                <div class="card-action">
+                                    <a target="_blank" rel="nofollow" href="https://github.com/zaibacu/rita-dsl">View it on Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="section scrollspy" id="demo">
+                    <div class="row">
+                        <h2>Demo</h2>
+                        <div class="flow-text">
+                            <p>
+                                This is a short demo to show how these patterns looks and works
+                            </p>
+                        </div>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">info_outline</i> Short syntax
+                                    guide
+                                </div>
+                                <div class="collapsible-body">
+                                    <p>
+                                        <code>MY_RULE->MARK("MY_LABEL")</code>
+                                        Left side represents a rule, right side - how to mark matched text (giving it a
+                                        label) <br/>
+                                        Multiple rules can be combined as follows:
+                                        <code>{RULE1, RULE2, ..., RULEn}->MARK("MY_LABEL")</code>
+                                    </p>
+                                    <p>
+                                    <h5>Basic rules:</h5>
+                                    <ul>
+                                        <li>WORD - matches any word. Adding concrete value, like: WORD("car") - matches
+                                            that concrete word
+                                        </li>
+                                        <li>LEMMA - matches by lemma. In short, it means that any form of word should
+                                            match. Eg.: LEMMA("like") would match: like, likes, liked
+                                        </li>
+                                        <li>IN_LIST - matches any word in given list</li>
+                                        <li>ENTITY - matches by entity label. These come from spaCy. Usual ones are:
+                                            PERSON, ORG (organization), GPE (geopolitical entity). Refer to <a
+                                                    href="https://spacy.io/" target="_blank">spaCy.io</a> for more
+                                            information, these come from NER (named entity recognition) which could have
+                                            different labels depending on language
+                                        </li>
+                                    </ul>
+
+                                    <h5>Most of the rules can have modifiers:</h5>
+                                    <ul>
+                                        <li><i>*</i> - 0 to infinity times.</li>
+                                        <li><i>+</i> - 1 to infinity times.</li>
+                                        <li><i>?</i> - Optional value. Can match once or don't match at all.</li>
+                                    </ul>
+                                    </p>
+                                    <p>
+                                        For a full syntax guide, refer to our <a
+                                            href="https://github.com/zaibacu/rita-dsl/blob/master/docs/syntax.md"
+                                            target="_blank">Documentation</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="app" class="row"></div>
+                </div>
+
+                <div class="section scrollspy" id="contact">
+                    <div class="row">
+                        <h2>Contact Us</h2>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegRD0Qm85diHiADhbESHKbjwFVTuF7qwvEa6MBFQqIngrFCg/viewform?embedded=true"
+                                width="640" height="903" frameborder="0" marginheight="0" marginwidth="0">Loading…
+                        </iframe>
+                    </div>
+                </div>
             </div>
-            <div class="col xl6 l12">
-              <p class="flow-text">
-                RITA is a <b>D</b>omain <b>S</b>pecific <b>L</b>anguage designed to create language patterns. <br/>
-                    These are used to find and extract information from text.
-              </p>
 
+            <div class="col hide-on-small-only m3 l2">
+                <ul class="section table-of-contents">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
             </div>
-          </div>
         </div>
+    </div>
 
-        <!--<div class="parallax-container">
-          <div class="parallax">
-            <img src="assets/logo-2.png">
-          </div>
-        </div>-->
-
-        <div class="section scrollspy" id="products">
-          <div class="row">
-            <h2>Products</h2>
-          </div>
-        </div>
-
-
-        <div class="section scrollspy" id="demo">
-          <div class="row">
-          <h2>Demo</h2>
-          <div class="flow-text">
-            <p>
-              This is a short demo to show how these patterns looks and works
-            </p>
-          </div>
-          <ul class="collapsible">
-            <li>
-              <div class="collapsible-header"><i class="material-icons">info_outline</i> Short syntax guide</div>
-              <div class="collapsible-body">
-                <p>
-                  <code>MY_RULE->MARK("MY_LABEL")</code>
-                  Left side represents a rule, right side - how to mark matched text (giving it a label) <br />
-                  Multiple rules can be combined as follows:
-                  <code>{RULE1, RULE2, ..., RULEn}->MARK("MY_LABEL")</code>
-                </p>
-                <p>
-                  <h5>Basic rules:</h5>
-                  <ul>
-                    <li>WORD - matches any word. Adding concrete value, like: WORD("car") - matches that concrete word</li>
-                    <li>LEMMA - matches by lemma. In short, it means that any form of word should match. Eg.: LEMMA("like") would match: like, likes, liked </li>
-                    <li>IN_LIST - matches any word in given list</li>
-                    <li>ENTITY - matches by entity label. These come from spaCy. Usual ones are: PERSON, ORG (organization), GPE (geopolitical entity). Refer to <a href="https://spacy.io/" target="_blank">spaCy.io</a> for more information, these come from NER (named entity recognition) which could have different labels depending on language</li>
-                  </ul>
-
-                  <h5>Most of the rules can have modifiers:</h5>
-                  <ul>
-                    <li><i>*</i> - 0 to infinity times.</li>
-                    <li><i>+</i> - 1 to infinity times.</li>
-                    <li><i>?</i> - Optional value. Can match once or don't match at all.</li>
-                  </ul>
-                </p>
-                <p>
-                  For a full syntax guide, refer to our <a href="https://github.com/zaibacu/rita-dsl/blob/master/docs/syntax.md" target="_blank">Documentation</a>
-                </p>
-              </div>
-            </li>
-          </ul>
-          </div>
-          <div id="app" class="row"></div>
-        </div>
-
-        <div class="section scrollspy" id="contact">
-          <div class="row">
-            <h2>Contact Us</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegRD0Qm85diHiADhbESHKbjwFVTuF7qwvEa6MBFQqIngrFCg/viewform?embedded=true" width="640" height="903" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-          </div>
-        </div>
-
-        <div class="row hide-on-small-only m3 l2">
-          <ul class="section table-of-contents">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#demo">Demo</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <script>
-          const DEMO_TOKEN = "{{ DEMO_TOKEN }}";
-          document.addEventListener('DOMContentLoaded', function() {
+    <script>
+        const DEMO_TOKEN = "{{ DEMO_TOKEN }}";
+        document.addEventListener('DOMContentLoaded', function () {
             M.FormSelect.init(document.querySelectorAll('select'), {});
             M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
 
@@ -110,10 +174,10 @@
 
             var elems = document.querySelectorAll('.scrollspy');
             var instances = M.ScrollSpy.init(elems, {});
-          });
-        </script>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/main.js"></script>
-  </body>
+        });
+    </script>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
 </html>
