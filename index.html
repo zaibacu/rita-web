@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rita-DSL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="static/frontend/tomorrow.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">RITA</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/">Demo</a></li>
+          <li><a href="https://forms.gle/vcQcWeLEv3MTu85V9">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="row">
+          <h1>Rita-DSL Demo</h1>
+          <div class="flow-text">
+            <p>
+              This is a demo of open source project <a href="https://github.com/zaibacu/rita-dsl" target="_blank">rita-dsl</a>
+              which is powered by another awesome project <a href="https://github.com/explosion/spaCy" target="_blank">spaCy</a>
+            </p>
+          </div>
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">info_outline</i> Short syntax guide</div>
+              <div class="collapsible-body">
+                <p>
+                  <code>MY_RULE->MARK("MY_LABEL")</code>
+                  Left side represents a rule, right side - how to mark matched text (giving it a label) <br />
+                  Multiple rules can be combined as follows:
+                  <code>{RULE1, RULE2, ..., RULEn}->MARK("MY_LABEL")</code>
+                </p>
+                <p>
+                  <h5>Basic rules:</h5>
+                  <ul>
+                    <li>WORD - matches any word. Adding concrete value, like: WORD("car") - matches that concrete word</li>
+                    <li>LEMMA - matches by lemma. In short, it means that any form of word should match. Eg.: LEMMA("like") would match: like, likes, liked </li>
+                    <li>IN_LIST - matches any word in given list</li>
+                    <li>ENTITY - matches by entity label. These come from spaCy. Usual ones are: PERSON, ORG (organization), GPE (geopolitical entity). Refer to <a href="https://spacy.io/" target="_blank">spaCy.io</a> for more information, these come from NER (named entity recognition) which could have different labels depending on language</li>
+                  </ul>
+
+                  <h5>Most of the rules can have modifiers:</h5>
+                  <ul>
+                    <li><i>*</i> - 0 to infinity times.</li>
+                    <li><i>+</i> - 1 to infinity times.</li>
+                    <li><i>?</i> - Optional value. Can match once or don't match at all.</li>
+                  </ul>
+                </p>
+                <p>
+                  For a full syntax guide, refer to our <a href="https://github.com/zaibacu/rita-dsl/blob/master/docs/syntax.md" target="_blank">Documentation</a>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">http</i> API</div>
+              <div class="collapsible-body">
+                <p>
+                  For large research or production systems, on-premises solution is only way to go.
+                  However, it might be too inconvenient and time consuming for some hobby/small solutions.
+                </p>
+                <p>
+                  We do provide an <a href="https://rita-demo.herokuapp.com/api/analyzer/" target="_blank">API</a> which allows to do full analysis via simple HTTP calls (which is being used by frontend). To access it, you do need account with API token created and request limit applied. Currently it is done manually on request.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="app" class="row">
+
+        <script>
+          const DEMO_TOKEN = "{{ DEMO_TOKEN }}";
+          document.addEventListener('DOMContentLoaded', function() {
+            M.FormSelect.init(document.querySelectorAll('select'), {});
+            M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
+          });
+        </script>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="static/frontend/main.js"></script>
+  </body>
+</html>
