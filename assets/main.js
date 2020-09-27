@@ -166,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"API_URL\", function() { return API_URL; });\nvar API_URL = \"https://reverso.lt\";\n\n//# sourceURL=webpack:///./frontend/src/constants/api.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"API_URL\", function() { return API_URL; });\nvar API_URL = \"https://api.rita-dsl.io\";\n\n//# sourceURL=webpack:///./frontend/src/constants/api.js?");
 
 /***/ }),
 
