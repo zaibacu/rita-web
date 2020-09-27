@@ -177,53 +177,63 @@
                         <p>
                             If for some reason you don't want or cannot use RITA on-premises, we can provide <i>RITA-as-a-Service</i> accessible via HTTP API.
                         </p>
-                        <table class="striped">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th color="green">Free Tier</th>
-                                    <th>Standard Tier</th>
-                                    <th>Pro Tier</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Request limits</td>
-                                    <td>1000/day</td>
-                                    <td>100 000/day</td>
-                                    <td>unlimited</td>
-                                </tr>
 
-                                <tr>
-                                    <td>Standalone Engine</td>
-                                    <td>+</td>
-                                    <td>+</td>
-                                    <td>+</td>
-                                </tr>
+                        <div class="col s12 m4">
+                            <div class="card hoverable">
+                                <div class="card-content">
+                                    <div class="card-title green white-text">
+                                        <h3>Free Tier</h3>
+                                        <h5>0 EUR/month</h5>
+                                    </div>
+                                    <ul class="collection">
+                                        <li class="collection-item">1000 requests/day limit</li>
+                                        <li class="collection-item">Regex Engine</li>
+                                    </ul>
+                                </div>
+                                <div class="card-action">
+                                    <div class="btn btn-block btn-large pink">Subscribe</div>
+                                </div>
+                            </div>
+                        </div>
 
-                                <tr>
-                                    <td>spaCy Engine</td>
-                                    <td>-</td>
-                                    <td>+</td>
-                                    <td>+</td>
-                                </tr>
+                        <div class="col s12 m4">
+                            <div class="card hoverable">
+                                <div class="card-content">
+                                    <div class="card-title blue white-text">
+                                        <h3>Standard Tier</h3>
+                                        <h5>25 EUR/month</h5>
+                                    </div>
+                                    <ul class="collection">
+                                        <li class="collection-item">100 000 requests/day limit</li>
+                                        <li class="collection-item">Regex Engine</li>
+                                        <li class="collection-item">spaCy Engine</li>
+                                    </ul>
+                                </div>
+                                <div class="card-action">
+                                    <div class="btn btn-block btn-large pink">Subscribe</div>
+                                </div>
+                            </div>
+                        </div>
 
-                                <tr>
-                                    <td>Support</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>+</td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td>Price</td>
-                                    <td>0 EUR</td>
-                                    <td>100 EUR/year</td>
-                                    <td>Contact us for quotas</td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                        <div class="col s12 m4">
+                            <div class="card hoverable">
+                                <div class="card-content">
+                                    <div class="card-title orange white-text">
+                                        <h3>Pro Tier</h3>
+                                        <h5>(Contact us for quota)</h5>
+                                    </div>
+                                    <ul class="collection">
+                                        <li class="collection-item">unlimited requests</li>
+                                        <li class="collection-item">Regex Engine</li>
+                                        <li class="collection-item">spaCy Engine</li>
+                                        <li class="collection-item">Live Support</li>
+                                    </ul>
+                                </div>
+                                <div class="card-action">
+                                    <div class="btn btn-block btn-large pink">Subscribe</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -294,6 +304,21 @@
         </div>
     </div>
 </footer>
+<style>
+    .card-content{
+        text-align: center;
+        padding: 0px !important;
+    }
+
+    .card-title {
+        padding: 20px;
+    }
+
+    .card ul li {
+        padding: 20px !important;
+        font-weight: bold;
+    }
+</style>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
