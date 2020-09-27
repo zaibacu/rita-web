@@ -12,7 +12,7 @@
 <main>
     <div class="container">
         <div class="row">
-            <div class="col m9 l10">
+            <div class="col s12 m9 l10 xl9">
 
                 <div class="section scrollspy" id="home">
                     <div class="row">
@@ -58,29 +58,58 @@
                     <img src="assets/logo-2.png">
                   </div>
                 </div>-->
-
-                <div class="section scrollspy" id="products">
+                <div class="section scrollspy" id="opensource">
                     <div class="row">
-                        <h2>Products</h2>
-                        <div class="col s12 m3">
+                        <h2>OpenSource</h2>
+                        <p class="flow-text">
+                            RITA Language is an OpenSource project, under MIT license, you can freely use it in your
+                            project for both,
+                            personal and commercial needs.
+
+                            <a target="_blank" rel="nofollow" href="https://github.com/zaibacu/rita-dsl">View it on
+                                Github</a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <div class="section scrollspy" id="plugins">
+                    <div class="row">
+                        <h2>Plugins</h2>
+                        <div class="col s12 m4">
                             <div class="card">
-                                <div class="card-image">
-                                    <img src="assets/github-logo.png"/>
-                                </div>
                                 <div class="card-content">
-                                    <span class="card-title">rita-dsl</span>
+                                    <span class="card-title">RITA Language</span>
                                     <p>
-                                        This is language itself. It is completely OpenSource, you can freely use it in
-                                        your project.
+                                        This is plugin for JetBrains IDEs (IntelijJ, PyCharm, etc.) which adds code
+                                        highlights and syntax checks.
+                                        It is totally free.
                                     </p>
                                 </div>
                                 <div class="card-action">
-                                    <a target="_blank" rel="nofollow" href="https://github.com/zaibacu/rita-dsl">View it on Github</a>
+                                    <a target="_blank" rel="nofollow"
+                                       href="https://plugins.jetbrains.com/plugin/15011-rita-language">JetBrains
+                                        Marketplace</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">RITA Studio</span>
+                                    <p>
+                                        This is plugin for JetBrains IDEs (IntelijJ, PyCharm, etc.) which adds ability
+                                        to have live preview of text matches by rules
+                                    </p>
+                                </div>
+                                <div class="card-action">
+                                    <i>Not released yet.</i> Contact us for <b>Beta Testing</b> access
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
 
@@ -142,22 +171,80 @@
                     <div id="app" class="row"></div>
                 </div>
 
-                <div class="section scrollspy" id="contact">
+                <div class="section scrollspy" id="api">
                     <div class="row">
-                        <h2>Contact Us</h2>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegRD0Qm85diHiADhbESHKbjwFVTuF7qwvEa6MBFQqIngrFCg/viewform?embedded=true"
-                                width="640" height="903" frameborder="0" marginheight="0" marginwidth="0">Loading…
-                        </iframe>
+                        <h2>API</h2>
+                        <p>
+                            If for some reason you don't want or cannot use RITA on-premises, we can provide <i>RITA-as-a-Service</i> accessible via HTTP API.
+                        </p>
+                        <table class="striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th color="green">Free Tier</th>
+                                    <th>Standard Tier</th>
+                                    <th>Pro Tier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Request limits</td>
+                                    <td>1000/day</td>
+                                    <td>100 000/day</td>
+                                    <td>unlimited</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Standalone Engine</td>
+                                    <td>+</td>
+                                    <td>+</td>
+                                    <td>+</td>
+                                </tr>
+
+                                <tr>
+                                    <td>spaCy Engine</td>
+                                    <td>-</td>
+                                    <td>+</td>
+                                    <td>+</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Support</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>+</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Price</td>
+                                    <td>0 EUR</td>
+                                    <td>100 EUR/year</td>
+                                    <td>Contact us for quotas</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="section scrollspy" id="sponsors">
+                    <div class="row">
+                        <h2>Sponsors</h2>
+                        <a href="https://www.jetbrains.com/?from=rita-dsl" rel="nofollow" target="_blank">
+                            <img src="assets/jetbrains.svg?raw=true"/>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="col hide-on-small-only m3 l2">
-                <ul class="section table-of-contents">
+            <div class="col hide-on-small-only m3 l2 xl2 offset-xl1 offset-m1">
+                <ul class="section table-of-contents pinned">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#opensource">OpenSource</a></li>
+                    <li><a href="#plugins">Plugins</a></li>
                     <li><a href="#demo">Demo</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#api">API</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
                 </ul>
             </div>
         </div>
@@ -170,13 +257,45 @@
             M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
 
             var elems = document.querySelectorAll('.parallax');
-            var instances = M.Parallax.init(elems, {});
+            M.Parallax.init(elems, {});
 
             var elems = document.querySelectorAll('.scrollspy');
-            var instances = M.ScrollSpy.init(elems, {});
+            M.ScrollSpy.init(elems, {});
         });
     </script>
 </main>
+
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">
+                    You can use rows and columns here to organize your footer
+                    content.
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://rita-dsl.readthedocs.io/en/latest/" rel="nofollow">Documentation</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/zaibacu/rita-dsl" rel="nofollow">Github</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.reddit.com/r/ritaDSL/" rel="nofollow">Reddit</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://forms.gle/iHoFjqQCYSc5AFzV8" rel="nofollow">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2020 RITA DSL
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="assets/main.js"></script>
 </body>
