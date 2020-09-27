@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="static/frontend/tomorrow.css">
+    <link rel="stylesheet" href="assets/tomorrow.css">
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">RITA</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#demo">Demo</a></li>
-          <li><a target=_blank href="https://forms.gle/vcQcWeLEv3MTu85V9">Contact Us</a></li>
-        </ul>
-      </div>
-    </nav>
     <main>
       <div class="container">
-        <div class="row" id="demo">
-          <h1>Demo</h1>
+
+        <div class="section scrollspy" id="home">
+          <div class="row">
+            <h1>RITA-DSL</h1>
+
+              <div class="flow-text">
+              <p>
+                  RITA is a <b>D</b>omain <b>S</b>pecific <b>L</b>anguage designed to create language patterns. <br/>
+                  These are used to find and extract information from text.
+              </p>
+              </div>
+          </div>
+        </div>
+
+        <div class="parallax-container">
+          <div class="parallax"><img src="assets/logo-2.png"></div>
+        </div>
+
+        <div class="section scrollspy" id="products">
+          <div class="row">
+            <h2>Products</h2>
+          </div>
+        </div>
+
+
+        <div class="section scrollspy" id="demo">
+          <div class="row">
+          <h2>Demo</h2>
           <div class="flow-text">
             <p>
-              This is a demo of open source project <a href="https://github.com/zaibacu/rita-dsl" target="_blank">rita-dsl</a>
-              which is powered by another awesome project <a href="https://github.com/explosion/spaCy" target="_blank">spaCy</a>
+              This is a short demo to show how these patterns looks and works
             </p>
           </div>
           <ul class="collapsible">
@@ -59,32 +75,42 @@
                 </p>
               </div>
             </li>
-            <li>
-              <div class="collapsible-header"><i class="material-icons">http</i> API</div>
-              <div class="collapsible-body">
-                <p>
-                  For large research or production systems, on-premises solution is only way to go.
-                  However, it might be too inconvenient and time consuming for some hobby/small solutions.
-                </p>
-                <p>
-                  We do provide an <a href="https://rita-demo.herokuapp.com/api/analyzer/" target="_blank">API</a> which allows to do full analysis via simple HTTP calls (which is being used by frontend). To access it, you do need account with API token created and request limit applied. Currently it is done manually on request.
-                </p>
-              </div>
-            </li>
+          </ul>
+          </div>
+          <div id="app" class="row"></div>
+        </div>
+
+        <div class="section scrollspy" id="contact">
+          <div class="row">
+            <h2>Contact Us</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegRD0Qm85diHiADhbESHKbjwFVTuF7qwvEa6MBFQqIngrFCg/viewform?embedded=true" width="640" height="903" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
+        </div>
+
+        <div class="row hide-on-small-only m3 l2">
+          <ul class="section table-of-contents">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#demo">Demo</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
-        <div id="app" class="row">
 
         <script>
           const DEMO_TOKEN = "{{ DEMO_TOKEN }}";
           document.addEventListener('DOMContentLoaded', function() {
             M.FormSelect.init(document.querySelectorAll('select'), {});
             M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
+
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems, {});
+
+            var elems = document.querySelectorAll('.scrollspy');
+            var instances = M.ScrollSpy.init(elems, {});
           });
         </script>
-      </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="static/frontend/main.js"></script>
+    <script src="assets/main.js"></script>
   </body>
 </html>
