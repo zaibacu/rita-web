@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="section">
+                <!--<div class="section">
                     <div class="parallax-container">
                       <div class="parallax">
                         <img src="assets/letters-bg.svg">
@@ -119,7 +119,7 @@
 
                     </div>
                     <a rel="nofollow" target="_blank" href="https://www.vecteezy.com/free-vector/font">Font Vectors by Vecteezy</a>
-                </div>
+                </div>-->
 
 
                 <div class="section scrollspy" id="demo">
@@ -261,7 +261,6 @@
     </div>
 
     <script>
-        const DEMO_TOKEN = "{{ DEMO_TOKEN }}";
         document.addEventListener('DOMContentLoaded', function () {
             M.FormSelect.init(document.querySelectorAll('select'), {});
             M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
@@ -271,6 +270,8 @@
 
             var elems = document.querySelectorAll('.scrollspy');
             M.ScrollSpy.init(elems, {});
+
+            window.cookieconsent.initialise({});
         });
     </script>
 </main>
@@ -327,10 +328,7 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-179340078-1');
-
-  window.cookieconsent.initialise({});
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="assets/main.js"></script>
