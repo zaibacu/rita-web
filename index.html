@@ -6,52 +6,63 @@
     <meta name="google-site-verification" content="S_hrk5GhCBSr5Z3ZhVcfvXhtip1zoM-ABgXccBTSvHQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Rita-DSL - Down to Earth NLP">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/cirrus-ui@0.6.0/dist/cirrus.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/tomorrow.css">
+    <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
 <main>
-    <div class="container">
+    <div class="content">
         <div class="row">
-            <div class="col s12 m9 l10 xl9">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <img class="responsive-img" src="assets/logo.svg">
+                    </div>
+                </div>
 
                 <div class="section scrollspy" id="home">
                     <div class="row">
-                        <div class="col s12">
-                            <img class="responsive-img" src="assets/logo.svg">
+                        <div class="col-12 hero bg-red-500">
+                            <div class="hero-body">
+                                <div class="content">
+                                    <h2 class="title white">RITA DSL</h2>
+                                    <p class="subtitle text-gray-100">
+                                        RITA is a <abbr title="Domain Specific Language">DSL</abbr> designed to create language
+                                        patterns. <br/>
+                                        These are used to find and extract information from text, or in other words -
+                                        <abbr title="Natural Language Processing">NLP</abbr>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col s12">
-                            <h1>About</h1>
-                            <p class="flow-text">
-                                RITA is a <b>D</b>omain <b>S</b>pecific <b>L</b>anguage designed to create language
-                                patterns. <br/>
-                                These are used to find and extract information from text, or in other words: <br/>
-                                <b>N</b>atural <b>L</b>anguage <b>P</b>rocessing.
-                            </p>
+                    </div>
+                </div>
 
-                            <p>
-                                <a href="https://github.com/zaibacu/rita-dsl" rel="nofollow" target="_blank">
-                                    <img src="https://img.shields.io/badge/rita-github-green.svg"/>
-                                </a>
-                                <a href="https://pypi.python.org/pypi/rita-dsl/" rel="nofollow" target="_blank">
-                                    <img src="https://camo.githubusercontent.com/0b02b2e57bb22a803351f2ba6aa9d2d17c143a81/68747470733a2f2f62616467652e667572792e696f2f70792f726974612d64736c2e737667"
-                                         alt="PyPI version fury.io"
-                                         data-canonical-src="https://badge.fury.io/py/rita-dsl.svg"
-                                         style="max-width:100%;">
-                                </a>
-                                <a href="https://rita-dsl.readthedocs.io/en/latest/" target="_blank" rel="nofollow">
-                                    <img alt="Flat-Square Badge"
-                                         src="https://readthedocs.org/projects/rita-dsl/badge/?version=latest">
-                                </a>
-                                <a href="https://github.com/zaibacu/rita-dsl/blob/master/LICENSE" target="_blank"
-                                   rel="nofollow">
-                                    <img src="https://camo.githubusercontent.com/dfa671aeae5ff24f8ad302ef81b2f8ec9118d3cd/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f7a6169626163752f726974612d64736c2e737667"
-                                         alt="GitHub license"
-                                         data-canonical-src="https://img.shields.io/github/license/zaibacu/rita-dsl.svg"
-                                         style="max-width:100%;">
-                                </a>
-                            </p>
+                <div class="section scrollspy" id="demo">
+                    <div class="row">
+                        <div class="frame">
+                            <div class="frame__header u-text-center">
+                                <div class="frame__title">
+                                    <h2 class="uppercase">Demo</h2>
+                                </div>
+                                <div class="frame__subtitle">
+                                    <p>
+                                        This is a short demo to show how these patterns looks and works.
+                                        For full syntax guide, refer to <a href="https://rita-dsl.readthedocs.io/en/latest/syntax/" target="_blank">Syntax Documentation</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="frame__body">
+                                <div class="content">
+                                    <div class="row level" id="app"></div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -59,266 +70,203 @@
 
                 <div class="section scrollspy" id="opensource">
                     <div class="row">
-                        <h2>OpenSource</h2>
-                        <p class="flow-text">
-                            RITA Language is an OpenSource project, under MIT license, you can freely use it in your
-                            project for both,
-                            personal and commercial needs.
+                        <div class="row">
+                        <div class="col-12 hero bg-red-500">
+                            <div class="hero-body">
+                                <div class="content">
+                                    <h2 class="title white">Open Source</h2>
+                                    <p class="subtitle text-gray-100">
+                                        RITA Language is an OpenSource project, under MIT license, you can freely use it in your
+                                        project for both,
+                                        personal and commercial needs.
 
-                            <a target="_blank" rel="nofollow" href="https://github.com/zaibacu/rita-dsl">View it on
-                                Github</a>
-                        </p>
+                                        <a target="_blank" rel="nofollow" href="https://github.com/zaibacu/rita-dsl">View it on
+                                            Github</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
                 </div>
 
                 <div class="section scrollspy" id="plugins">
                     <div class="row">
-                        <h2>Plugins</h2>
-                        <div class="col s12 m4">
-                            <div class="card">
-                                <div class="card-content">
-                                    <span class="card-title">RITA Language</span>
-                                    <p>
-                                        This is plugin for JetBrains IDEs (IntelijJ, PyCharm, etc.) which adds code
-                                        highlights and syntax checks.
-                                        It is totally free.
-                                    </p>
+                        <div class="frame">
+                            <div class="frame__header u-text-center">
+                                <div class="frame__title">
+                                    <h2 clas="uppercase">Plugins</h2>
                                 </div>
-                                <div class="card-action">
-                                    <a target="_blank" rel="nofollow"
-                                       href="https://plugins.jetbrains.com/plugin/15011-rita-language">JetBrains
-                                        Marketplace</a>
+                                <div class="frame__subtitle">
+                                    <p>
+                                        We provide some tools making working with RITA Language easier and more efficient
+                                    </p>
                                 </div>
                             </div>
-                        </div>
+                            <div class="frame__body">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-head">
+                                                    <p class="font-bold px-3">RITA Language</p>
+                                                </div>
+                                                <div class="content">
+                                                    <p>
+                                                        This is plugin for JetBrains IDEs (IntelijJ, PyCharm, etc.) which adds code
+                                                        highlights and syntax checks.
+                                                        It is totally free.
+                                                    </p>
+                                                </div>
+                                                <div class="action-bar u-center">
+                                                    <a target="_blank" rel="nofollow"
+                                                       href="https://plugins.jetbrains.com/plugin/15011-rita-language">JetBrains
+                                                        Marketplace</a>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                        <div class="col s12 m4">
-                            <div class="card">
-                                <div class="card-content">
-                                    <span class="card-title">RITA Studio</span>
-                                    <p>
-                                        This is plugin for JetBrains IDEs (IntelijJ, PyCharm, etc.) which adds ability
-                                        to have live preview of text matches by rules
-                                    </p>
-                                </div>
-                                <div class="card-action">
-                                    <i>Not released yet.</i> Contact us for <b>Beta Testing</b> access
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--<div class="section">
-                    <div class="parallax-container">
-                      <div class="parallax">
-                        <img src="assets/letters-bg.svg">
-                      </div>
-
-                    </div>
-                    <a rel="nofollow" target="_blank" href="https://www.vecteezy.com/free-vector/font">Font Vectors by Vecteezy</a>
-                </div>-->
-
-
-                <div class="section scrollspy" id="demo">
-                    <div class="row">
-                        <h2>Demo</h2>
-                        <div class="flow-text">
-                            <p>
-                                This is a short demo to show how these patterns looks and works.
-                            </p>
-                        </div>
-                        <ul class="collapsible">
-                            <li>
-                                <div class="collapsible-header"><i class="material-icons">info_outline</i> Short syntax
-                                    guide
-                                </div>
-                                <div class="collapsible-body">
-                                    <p>
-                                        <code>MY_RULE->MARK("MY_LABEL")</code>
-                                        Left side represents a rule, right side - how to mark matched text (giving it a
-                                        label) <br/>
-                                        Multiple rules can be combined as follows:
-                                        <code>{RULE1, RULE2, ..., RULEn}->MARK("MY_LABEL")</code>
-                                    </p>
-                                    <p>
-                                    <h5>Basic rules:</h5>
-                                    <ul>
-                                        <li>WORD - matches any word. Adding concrete value, like: WORD("car") - matches
-                                            that concrete word
-                                        </li>
-                                        <li>LEMMA - matches by lemma. In short, it means that any form of word should
-                                            match. Eg.: LEMMA("like") would match: like, likes, liked
-                                        </li>
-                                        <li>IN_LIST - matches any word in given list</li>
-                                        <li>ENTITY - matches by entity label. These come from spaCy. Usual ones are:
-                                            PERSON, ORG (organization), GPE (geopolitical entity). Refer to <a
-                                                    href="https://spacy.io/" target="_blank">spaCy.io</a> for more
-                                            information, these come from NER (named entity recognition) which could have
-                                            different labels depending on language
-                                        </li>
-                                    </ul>
-
-                                    <h5>Most of the rules can have modifiers:</h5>
-                                    <ul>
-                                        <li><i>*</i> - 0 to infinity times.</li>
-                                        <li><i>+</i> - 1 to infinity times.</li>
-                                        <li><i>?</i> - Optional value. Can match once or don't match at all.</li>
-                                    </ul>
-                                    </p>
-                                    <p>
-                                        For a full syntax guide, refer to our <a
-                                            href="https://github.com/zaibacu/rita-dsl/blob/master/docs/syntax.md"
-                                            target="_blank">Documentation</a>
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="app" class="row"></div>
-                </div>
-
-                <div class="section scrollspy" id="api">
-                    <div class="row">
-                        <h2>API</h2>
-                        <p class="flow-text">
-                            If for some reason you don't want or cannot use RITA on-premises, we can provide <i>RITA-as-a-Service</i> accessible via HTTP API.
-                        </p>
-
-                        <div class="col s12 m4">
-                            <div class="card hoverable">
-                                <div class="card-content">
-                                    <div class="card-title green white-text">
-                                        <h3>Free Tier</h3>
-                                        <h5>0 EUR/month</h5>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-head">
+                                                    <p class="font-bold px-3">RITA Studio</p>
+                                                </div>
+                                                <div class="content">
+                                                    <p>
+                                                        This is plugin for JetBrains IDEs (IntelijJ, PyCharm, etc.) which adds ability
+                                                        to have live preview of text matches by rules
+                                                    </p>
+                                                </div>
+                                                <div class="action-bar u-center">
+                                                    <i>Not released yet.</i><br />Contact us for <b>Beta Testing</b> access
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <ul class="collection">
-                                        <li class="collection-item">1000 requests/day limit</li>
-                                        <li class="collection-item">Regex Engine</li>
-                                    </ul>
-                                </div>
-                                <div class="card-action">
-                                    <a class="btn btn-block btn-large pink" href="https://api.rita-dsl.io/register">Register</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col s12 m4">
-                            <div class="card hoverable">
-                                <div class="card-content">
-                                    <div class="card-title blue white-text">
-                                        <h3>Standard Tier</h3>
-                                        <h5>(in progress)</h5>
-                                    </div>
-                                    <ul class="collection">
-                                        <li class="collection-item">100 000 requests/day limit</li>
-                                        <li class="collection-item">Regex Engine</li>
-                                        <li class="collection-item">spaCy Engine</li>
-                                    </ul>
-                                </div>
-                                <div class="card-action">
-                                    <a class="btn btn-block btn-large pink" href="https://forms.gle/iHoFjqQCYSc5AFzV8">Contact Us</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col s12 m4">
-                            <div class="card hoverable">
-                                <div class="card-content">
-                                    <div class="card-title orange white-text">
-                                        <h3>Pro Tier</h3>
-                                        <h5>(Contact us for quota)</h5>
-                                    </div>
-                                    <ul class="collection">
-                                        <li class="collection-item">unlimited requests</li>
-                                        <li class="collection-item">Regex Engine</li>
-                                        <li class="collection-item">spaCy Engine</li>
-                                        <li class="collection-item">Live Support</li>
-                                    </ul>
-                                </div>
-                                <div class="card-action">
-                                    <a class="btn btn-block btn-large pink" href="https://forms.gle/iHoFjqQCYSc5AFzV8">Contact Us</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            </div>
+                <div class="section scrollspy" id="api">
+                    <div class="row">
+                        <div class="frame">
+                            <div class="frame__header u-text-center">
+                                <div class="frame__title">
+                                    <h2 clas="uppercase">API</h2>
+                                </div>
+                                <div class="frame__subtitle">
+                                    <p>
+                                        If for some reason you don't want or cannot use RITA on-premises, we can provide <i>RITA-as-a-Service</i> accessible via HTTP API.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="frame__body">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="card">
+                                                <div class="card-container">
+                                                    <div class="card-image" style="background-color: #00B954"></div>
+                                                    <div class="title-container">
+                                                        <p class="title">Free Tier</p>
+                                                        <span class="subtitle">0 EUR/month</span>
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <ul class="collection">
+                                                        <li class="collection-item">1000 requests/day limit</li>
+                                                        <li class="collection-item">Regex Engine</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="action-bar u-center">
+                                                    <a class="btn btn-block btn-large btn-link" href="https://api.rita-dsl.io/register">Register</a>
+                                                </div>
+                                            </div>
+                                        </div>
 
-            <div class="col hide-on-small-only m3 l2 xl2 offset-xl1 offset-m1">
-                <ul class="section table-of-contents pinned">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#opensource">OpenSource</a></li>
-                    <li><a href="#plugins">Plugins</a></li>
-                    <li><a href="#demo">Demo</a></li>
-                    <li><a href="#api">API</a></li>
-                </ul>
+                                        <div class="col-4">
+                                            <div class="card">
+                                                <div class="card-container">
+                                                    <div class="card-image" style="background-color: #00AAF8"></div>
+                                                    <div class="title-container">
+                                                        <p class="title">Standard Tier</p>
+                                                        <span class="subtitle">(in progress)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <ul class="collection">
+                                                        <li class="collection-item">100 000 requests/day limit</li>
+                                                        <li class="collection-item">Regex Engine</li>
+                                                        <li class="collection-item">spaCy Engine</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="action-bar u-center">
+                                                    <a class="btn btn-block btn-large btn-link" href="https://forms.gle/iHoFjqQCYSc5AFzV8">Contact Us</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="card">
+                                                <div class="card-container">
+                                                    <div class="card-image" style="background-color: #FF9600"></div>
+                                                    <div class="title-container">
+                                                        <p class="title">Pro Tier</p>
+                                                        <span class="subtitle">(Contact us for quota)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <ul class="collection">
+                                                        <li class="collection-item">unlimited requests</li>
+                                                        <li class="collection-item">Regex Engine</li>
+                                                        <li class="collection-item">spaCy Engine</li>
+                                                        <li class="collection-item">Live Support</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="action-bar u-center">
+                                                    <a class="btn btn-block btn-large btn-link" href="https://forms.gle/iHoFjqQCYSc5AFzV8">Contact Us</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            M.FormSelect.init(document.querySelectorAll('select'), {});
-            M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
-
-            var elems = document.querySelectorAll('.parallax');
-            M.Parallax.init(elems, {});
-
-            var elems = document.querySelectorAll('.scrollspy');
-            M.ScrollSpy.init(elems, {});
-
-            window.cookieconsent.initialise({});
-        });
-    </script>
 </main>
 
 
-<footer class="page-footer">
-    <div class="container">
+<footer class="footer">
+    <div class="content">
         <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Our Sponsors</h5>
+            <div class="col-6">
+                <h5 class="footer__title white uppercase">Our Sponsors</h5>
                 <a href="https://www.jetbrains.com/?from=rita-dsl" rel="nofollow" target="_blank">
                             <img src="assets/jetbrains.svg?raw=true"/>
                         </a>
             </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="https://rita-dsl.readthedocs.io/en/latest/" rel="nofollow">Documentation</a></li>
-                    <li><a class="grey-text text-lighten-3" href="https://github.com/zaibacu/rita-dsl" rel="nofollow">Github</a></li>
-                    <li><a class="grey-text text-lighten-3" href="https://www.reddit.com/r/ritaDSL/" rel="nofollow">Reddit</a></li>
-                    <li><a class="grey-text text-lighten-3" href="https://forms.gle/iHoFjqQCYSc5AFzV8" rel="nofollow" target="_blank">Contact Us</a></li>
+            <div class="col-4 offset-2">
+                <h5 class="footer__title white uppercase">Links</h5>
+                <ul class="no-bullets">
+                    <li class="footer__list-item"><a href="https://rita-dsl.readthedocs.io/en/latest/" rel="nofollow">Documentation</a></li>
+                    <li class="footer__list-item"><a href="https://github.com/zaibacu/rita-dsl" rel="nofollow">Github</a></li>
+                    <li class="footer__list-item"><a href="https://www.reddit.com/r/ritaDSL/" rel="nofollow">Reddit</a></li>
+                    <li class="footer__list-item"><a href="https://forms.gle/iHoFjqQCYSc5AFzV8" rel="nofollow" target="_blank">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2020 RITA DSL
-            <!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
-        </div>
-    </div>
+    <p class="subtitle">© 2021 RITA DSL</p>
 </footer>
-<style>
-    .card-content{
-        text-align: center;
-        padding: 0px !important;
-    }
-
-    .card-title {
-        padding: 20px;
-    }
-
-    .card ul li {
-        padding: 20px !important;
-        font-weight: bold;
-    }
-</style>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179340078-1"></script>
@@ -330,7 +278,6 @@
   gtag('config', 'UA-179340078-1');
 </script>
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>
